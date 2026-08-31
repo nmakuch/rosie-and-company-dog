@@ -1,0 +1,448 @@
+.bookingPage {
+    min-height: 70svh;
+    padding-block: clamp(4rem, 8vw, 8rem);
+    background: var(--color-background);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 17rem minmax(0, 38rem);
+    justify-content: center;
+    gap: clamp(4rem, 10vw, 9rem);
+}
+
+.progressArea {
+    padding-top: 0.5rem;
+}
+
+.progressLabel {
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.progressTrack {
+    height: 0.25rem;
+    overflow: hidden;
+    background: rgb(35 76 63 / 14%);
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--color-accent);
+    transition: width 240ms ease;
+}
+
+.sectionLabel {
+    margin: 1.75rem 0 0;
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.eyebrow {
+    margin-bottom: 1.25rem;
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.formArea h1 {
+    max-width: 20ch;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+}
+
+.formArea h1:focus {
+    outline: none;
+}
+
+.introduction {
+    max-width: 36rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.reassurance {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+
+    margin: 0 0 2rem;
+    padding: 1.5rem 0;
+
+    border-top: 1px solid rgb(35 76 63 / 18%);
+    border-bottom: 1px solid rgb(35 76 63 / 18%);
+    list-style: none;
+}
+
+.reassurance li {
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+/* Form fields */
+
+.field {
+    margin-top: 2rem;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 0.65rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.field input,
+.field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem 1.25rem;
+
+    border: 1px solid rgb(35 76 63 / 45%);
+    border-radius: 0.35rem;
+    color: var(--color-text);
+    background: var(--color-white);
+    font: inherit;
+    font-size: 1rem;
+}
+
+.field textarea {
+    min-height: 10rem;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: var(--color-primary);
+    outline: 3px solid rgb(217 121 95 / 45%);
+    outline-offset: 2px;
+}
+
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+    border-color: #a7352a;
+}
+
+.error {
+    margin: 0.75rem 0 0;
+    color: #a7352a;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Choice questions */
+
+.choiceFieldset {
+    margin: 2rem 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.choiceList {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.choice {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+
+    min-height: 4rem;
+    padding: 1rem 1.25rem;
+
+    border: 1px solid rgb(35 76 63 / 35%);
+    border-radius: 0.35rem;
+    background: var(--color-white);
+    cursor: pointer;
+}
+
+.choice:hover {
+    border-color: var(--color-primary);
+}
+
+.choice:focus-within {
+    outline: 3px solid rgb(217 121 95 / 45%);
+    outline-offset: 2px;
+}
+
+.choice:has(input:checked) {
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+}
+
+.choice input {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin: 0;
+    accent-color: var(--color-accent);
+}
+
+.choiceContent {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.choiceContent strong {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.choiceContent>span {
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.choice:has(input:checked) .choiceContent>span {
+    color: rgb(255 253 249 / 70%);
+}
+
+/* Navigation buttons */
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.primaryAction,
+.backAction {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primaryAction {
+    padding: 0.9rem 1.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 100vw;
+    color: var(--color-white);
+    background: var(--color-primary);
+}
+
+.primaryAction:hover {
+    color: var(--color-primary);
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+}
+
+.backAction {
+    padding: 0.75rem 0;
+    border: 0;
+    color: var(--color-primary);
+    background: transparent;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+.primaryAction:focus-visible,
+.backAction:focus-visible,
+.editAction:focus-visible {
+    outline: 3px solid rgb(217 121 95 / 45%);
+    outline-offset: 3px;
+}
+
+/* Review screen */
+
+.reviewSections {
+    border-top: 1px solid rgb(35 76 63 / 20%);
+}
+
+.reviewSection {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.4fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+
+    padding-block: 1.75rem;
+    border-bottom: 1px solid rgb(35 76 63 / 20%);
+}
+
+.reviewSection h2 {
+    margin: 0;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.reviewDetails {
+    display: grid;
+    gap: 0;
+    margin: 0;
+}
+
+.reviewDetails>div {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    align-items: start;
+    gap: 1rem;
+
+    padding-block: 0.75rem;
+    border-bottom: 1px solid rgb(35 76 63 / 12%);
+}
+
+.reviewDetails>div:first-child {
+    padding-top: 0;
+}
+
+.reviewDetails>div:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.reviewDetails dt {
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.reviewDetails dd {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 1rem;
+
+    min-width: 0;
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.reviewDetails dd>span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.editAction {
+    justify-self: end;
+    padding: 0;
+    border: 0;
+    color: var(--color-accent);
+    background: transparent;
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+    cursor: pointer;
+}
+
+.editAction:hover {
+    color: var(--color-primary);
+}
+
+/* Confirmation screen */
+
+.confirmation {
+    max-width: 38rem;
+}
+
+.confirmationNote {
+    max-width: 36rem;
+    margin: 0;
+    padding: 1.25rem;
+
+    color: var(--color-primary);
+    background: var(--color-white);
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+/* Visually hidden content */
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* Responsive styles */
+
+@media (max-width: 55rem) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .progressArea {
+        padding-top: 0;
+    }
+
+    .reviewSection {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .reviewDetails>div {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+    }
+}
+
+@media (max-width: 32rem) {
+    .reassurance {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+
+    .primaryAction {
+        width: 100%;
+    }
+
+    .backAction {
+        align-self: flex-start;
+    }
+
+    .reviewDetails dd {
+        gap: 0.75rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .progressFill {
+        transition: none;
+    }
+}

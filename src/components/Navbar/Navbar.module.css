@@ -1,0 +1,123 @@
+.navbar {
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid rgb(35 76 63 / 18%);
+    background: var(--color-background);
+}
+
+.inner {
+    position: relative;
+    display: flex;
+    min-height: 6.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.brand span {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.brand small {
+    margin-top: 0.3rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navigationLink {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navigationLink:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.35rem;
+}
+
+.cta {
+    padding: 0.9rem 1.25rem;
+    border-radius: 100vw;
+    color: var(--color-white);
+    background: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        color 180ms ease,
+        background 180ms ease;
+}
+
+.cta:hover {
+    color: var(--color-primary);
+    background: var(--color-accent);
+}
+
+.menuButton {
+    display: none;
+}
+
+@media (max-width: 47.999rem) {
+    .inner {
+        min-height: 5rem;
+    }
+
+    .menuButton {
+        display: block;
+        padding: 0;
+        border: 0;
+        color: var(--color-primary);
+        background: transparent;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+
+        padding: 1.5rem 1.25rem 2rem;
+        border-bottom: 1px solid rgb(35 76 63 / 18%);
+        background: var(--color-background);
+        box-shadow: 0 1rem 2rem rgb(37 49 41 / 10%);
+    }
+
+    .navigationOpen {
+        display: flex;
+    }
+
+    .navigationLink {
+        font-size: 1rem;
+    }
+
+    .cta {
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+}
