@@ -1,6 +1,6 @@
 import Container from "../../components/Container/Container";
 
-import styles from "./FAQPage.module.css";
+import styles from "./FaqPage.module.css";
 
 const questions = [
     {
@@ -40,7 +40,7 @@ const questions = [
     },
 ];
 
-export default function FAQPage() {
+export default function FaqPage() {
     return (
         <section className={styles.page} aria-labelledby="faq-heading">
             <div className={styles.hero}>
