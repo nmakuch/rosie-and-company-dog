@@ -13,7 +13,7 @@ export default function Footer() {
                     <div>
                         <p className={styles.eyebrow}>Ready for a happier routine?</p>
 
-                        <h2>Let’s plan your dog’s next adventure.</h2>
+                        <h2>Let's plan your dog's next adventure.</h2>
                     </div>
 
                     <a className={styles.calloutAction} href="mailto:hello@example.com">
@@ -26,21 +26,25 @@ export default function Footer() {
             <Container className={styles.footerContent}>
                 <div className={styles.brand}>
                     <a href="#top">Rosie & Company</a>
-                    <p>Personal dog walking with care, patience, and plenty of fresh air.</p>
+                    <p>Personal dog walking with care, patience, and plenty of fresh air, thoughtfully tailored to your dog’s pace and daily routine.</p>
                 </div>
 
                 <div className={styles.linkGroup}>
                     <p className={styles.groupHeading}>Explore</p>
+                    <Link to="/#how-it-works">How it works</Link>
                     <Link to="/#services">Services</Link>
+                    <Link to="/#pricing">Pricing</Link>
                     <Link to="/#about">About</Link>
                     <Link to="/faq">FAQ</Link>
+                    <Link to="/booking">Book a walk</Link>
                 </div>
 
                 <div className={styles.linkGroup}>
                     <p className={styles.groupHeading}>Get in touch</p>
 
-                    <a href="mailto:hello@example.com">hello@example.com</a>
-                    <p>Ottawa, Ontario</p>
+                    <a href="mailto:hello@rosie&co.ca">hello@rosie&co.ca</a>
+                    <p>Toronto, Ontario</p>
+                    <p>(123) 456-7890</p>
                 </div>
 
                 <div className={styles.footerBottom}>

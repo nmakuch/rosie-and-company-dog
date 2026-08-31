@@ -13,7 +13,7 @@ const steps = [
         number: "02",
         title: "Meet your walker",
         description:
-            "We’ll arrange an introduction so everyone feels comfortable before the first scheduled walk.",
+            "We'll arrange an introduction so everyone feels comfortable before the first scheduled walk.",
     },
     {
         number: "03",
@@ -35,7 +35,7 @@ export default function HowItWorks() {
                     <p className={styles.eyebrow}>How it works</p>
 
                     <h2 id="process-heading">
-                        Starting a better walking routine couldn’t be easier.
+                        Starting a better walking routine couldn't be easier.
                     </h2>
                 </div>
 

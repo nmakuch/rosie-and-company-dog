@@ -12,22 +12,48 @@ export default function Navbar() {
         setMenuOpen(false);
     }
 
+    function toggleMenu() {
+        setMenuOpen((current) => !current);
+    }
+
     return (
         <header className={styles.navbar}>
             <Container className={styles.inner}>
                 <Link className={styles.brand} to="/" onClick={closeMenu}>
-                    <span>Rosie & Company</span>
-                    <small>Dog Walking</small>
+                    <img
+                        className={styles.brandLogo}
+                        src="/images/logo/rosie-logo.svg"
+                        alt=""
+                        aria-hidden="true"
+                    />
+
+                    <span className={styles.brandText}>
+                        <span className={styles.brandName}>
+                            Rosie & Company
+                        </span>
+
+                        <small>Dog Walking</small>
+                    </span>
                 </Link>
 
                 <button
-                    className={styles.menuButton}
+                    className={`${styles.menuButton} ${menuOpen ? styles.menuButtonOpen : ""
+                        }`}
                     type="button"
+                    aria-label={
+                        menuOpen
+                            ? "Close navigation menu"
+                            : "Open navigation menu"
+                    }
                     aria-expanded={menuOpen}
                     aria-controls="primary-navigation"
-                    onClick={() => setMenuOpen((current) => !current)}
+                    onClick={toggleMenu}
                 >
-                    {menuOpen ? "Close" : "Menu"}
+                    <span className={styles.menuIcon} aria-hidden="true">
+                        <span />
+                        <span />
+                        <span />
+                    </span>
                 </button>
 
                 <nav
@@ -36,27 +62,51 @@ export default function Navbar() {
                         }`}
                     aria-label="Primary navigation"
                 >
-                    <Link className={styles.navigationLink} to="/#how-it-works" onClick={closeMenu}>
+                    <Link
+                        className={styles.navigationLink}
+                        to="/#how-it-works"
+                        onClick={closeMenu}
+                    >
                         How it works
                     </Link>
 
-                    <Link className={styles.navigationLink} to="/#services" onClick={closeMenu}>
+                    <Link
+                        className={styles.navigationLink}
+                        to="/#services"
+                        onClick={closeMenu}
+                    >
                         Services
                     </Link>
 
-                    <Link className={styles.navigationLink} to="/#pricing" onClick={closeMenu}>
+                    <Link
+                        className={styles.navigationLink}
+                        to="/#pricing"
+                        onClick={closeMenu}
+                    >
                         Pricing
                     </Link>
 
-                    <Link className={styles.navigationLink} to="/#about" onClick={closeMenu}>
+                    <Link
+                        className={styles.navigationLink}
+                        to="/#about"
+                        onClick={closeMenu}
+                    >
                         About
                     </Link>
 
-                    <Link className={styles.navigationLink} to="/faq" onClick={closeMenu}>
+                    <Link
+                        className={styles.navigationLink}
+                        to="/faq"
+                        onClick={closeMenu}
+                    >
                         FAQ
                     </Link>
 
-                    <Link className={styles.cta} to="/booking" onClick={closeMenu}>
+                    <Link
+                        className={styles.cta}
+                        to="/booking"
+                        onClick={closeMenu}
+                    >
                         Book a walk
                     </Link>
                 </nav>

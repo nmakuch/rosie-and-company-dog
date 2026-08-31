@@ -7,15 +7,14 @@ export default function Hero() {
         <section className={styles.hero} aria-labelledby="hero-heading">
             <Container className={styles.layout}>
                 <div className={styles.content}>
-                    <p className={styles.eyebrow}>Reliable care. Every walk.</p>
+                    <p className={styles.eyebrow}>Proudly serving the toronto area</p>
 
                     <h1 id="hero-heading">
-                        Trusted local walks, tailored to your dog.
+                        Reliable walks. Happier dogs.
                     </h1>
 
                     <p className={styles.introduction}>
-                        Personal dog walking designed around your dog's routine,
-                        personality, and favourite places to explore.
+                        A trusted choice for dog walking in Toronto, with personalized walks shaped around your dog's routine, personality, and favourite places to explore.
                     </p>
 
                     <div className={styles.actions}>

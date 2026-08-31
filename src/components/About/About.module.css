@@ -35,8 +35,8 @@
     bottom: 0;
     width: min(17rem, 80%);
     padding: 1.5rem;
-    color: var(--color-primary);
-    background: var(--color-accent);
+    color: white;
+    background: var(--color-primary);
 }
 
 .note span {
