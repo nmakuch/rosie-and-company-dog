@@ -9,10 +9,10 @@ export default function About() {
                 <div className={styles.media}>
                     <div className={styles.imageFrame}>
                         <img
-                            src="/images/main-page/about-dog.webp"
+                            src="/images/main-page/about-dog-480.webp"
                             alt="A dog enjoying time outdoors with its walker"
-                            width="720"
-                            height="900"
+                            width="480"
+                            height="600"
                             loading="lazy"
                             decoding="async"
                         />

@@ -36,7 +36,9 @@ export default function Hero() {
                 <div className={styles.imageColumn}>
                     <div className={styles.imageFrame}>
                         <img
-                            src="/images/main-page/hero-dog.webp"
+                            src="/images/main-page/hero-dog-840.webp"
+                            srcSet="/images/main-page/hero-dog-420.webp 420w,/images/main-page/hero-dog-840.webp 840w"
+                            sizes="(max-width: 56rem) calc(100vw - 3rem), 40vw"
                             alt="Two dogs enjoying a walk outdoors"
                             width="840"
                             height="630"
