@@ -36,8 +36,12 @@ export default function Hero() {
                 <div className={styles.imageColumn}>
                     <div className={styles.imageFrame}>
                         <img
-                            src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=85"
+                            src="/images/main-page/hero-dog.webp"
                             alt="Two dogs enjoying a walk outdoors"
+                            width="840"
+                            height="630"
+                            fetchPriority="high"
+                            decoding="async"
                         />
                     </div>
                 </div>
