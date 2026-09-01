@@ -40,8 +40,8 @@ export default function Hero() {
                             alt="Two dogs enjoying a walk outdoors"
                             width="840"
                             height="630"
+                            loading="eager"
                             fetchPriority="high"
-                            decoding="async"
                         />
                     </div>
                 </div>
